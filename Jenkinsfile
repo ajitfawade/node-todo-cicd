@@ -1,11 +1,13 @@
 pipeline {
     agent { label 'dev' }
+     
 
     stages {
 
         stage ('Code') {
             steps {
                 git url: 'https://github.com/ajitfawade/node-todo-cicd.git', branch: 'master'
+                echo ' pull from master '
             }
         }
         
